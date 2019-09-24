@@ -60,5 +60,4 @@ void ModeStabilize::run()
                                        g.throttle_filt);
 }
 
-test add text and git
-
+//test add text and git
