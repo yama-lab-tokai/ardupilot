@@ -102,6 +102,8 @@ void GCS_Copter::update_vehicle_sensor_status_flags(void)
     case Mode::Number::FLOWHOLD:
         control_sensors_enabled |= MAV_SYS_STATUS_SENSOR_Z_ALTITUDE_CONTROL;
         break;
+
+    case Mode::Number::NEW_MODE:
     default:
         // stabilize, acro, drift, and flip have no automatic x,y or z control (i.e. all manual)
         break;
