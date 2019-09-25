@@ -238,6 +238,8 @@ public:
     friend class ModeThrow;
     friend class ModeZigZag;
 
+    friend class Modenew;
+
     Copter(void);
 
     // HAL::Callbacks implementation.
