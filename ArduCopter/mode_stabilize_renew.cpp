@@ -6,7 +6,7 @@
 
 // stabilize_run - runs the main stabilize controller
 // should be called at 100hz or more
-void ModeStabilize::run()
+void Modenew::run()
 {
     // apply simple mode transform to pilot inputs
     update_simple_mode();
@@ -59,5 +59,3 @@ void ModeStabilize::run()
                                        true,
                                        g.throttle_filt);
 }
-
-//test add text and git

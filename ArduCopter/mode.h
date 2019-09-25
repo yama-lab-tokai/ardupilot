@@ -35,6 +35,7 @@ public:
         FLOWHOLD  =    22,  // FLOWHOLD holds position with optical flow without rangefinder
         FOLLOW    =    23,  // follow attempts to follow another vehicle or ground station
         ZIGZAG    =    24,  // ZIGZAG mode is able to fly in a zigzag manner with predefined point A and point B
+        NEW_MODE = 25 //new test mode
     };
 
     // constructor
@@ -1149,6 +1150,28 @@ protected:
 
     const char *name() const override { return "STABILIZE"; }
     const char *name4() const override { return "STAB"; }
+
+private:
+
+};
+
+class Modenew : public Mode {
+
+public:
+    // NEWmode
+    using Mode::Mode;
+
+    virtual void run() override;
+
+    bool requires_GPS() const override { return false; }
+    bool has_manual_throttle() const override { return true; }
+    bool allows_arming(bool from_gcs) const override { return true; };
+    bool is_autopilot() const override { return false; }
+
+protected:
+
+    const char *name() const override { return "NEWMODE"; }
+    const char *name4() const override { return "NMODE"; }
 
 private:
 
