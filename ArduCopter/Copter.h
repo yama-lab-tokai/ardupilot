@@ -958,7 +958,7 @@ private:
     ModeZigZag mode_zigzag;
 #endif
 #if MODE_NEW_ENABLED == ENABLED
-    ModeNEW mode_new;
+    Modenew mode_new;
 #endif
 
 
